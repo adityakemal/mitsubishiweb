@@ -1,0 +1,239 @@
+body{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: 100vh;
+    font-family: 'Rubik';
+}
+.modal-youtube{
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    background-color: #fff;
+    z-index: 100;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background-color: grey;
+}
+.modal-youtube iframe{
+    width: 80%;
+    height: 80vh;
+}
+.modal-youtube .close{
+    color: red;
+    font-weight: bold;
+    font-size: 20px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 20px;
+    cursor: pointer;
+}
+
+nav{
+    height: 80px;
+    /* width: 100%; */
+    background-color: black;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 38px;
+    padding-left: 24px;
+}
+
+.menus{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.menus li{
+    list-style: none;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 45px;
+    font-family: Rubik;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 160%;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+.menus li img{
+    margin-left: 6px;
+}
+
+li .burger .list{
+    width: 26px;
+    margin-bottom: 4px;
+    height: 3px;
+    background: #DA291C;
+    border-radius: 4px;
+}
+li .burger .list:last-of-type{
+    margin-bottom: 0;
+}
+
+.jumbotron{
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 53px 132px;
+    color: white;
+    background-position: center;
+    height: 700px;
+    position: relative;
+}
+
+
+.jumbotron .number{
+    margin-bottom: 192px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    font-weight: 500;
+}
+
+.number>div{
+    text-align: center;
+}
+
+.number>span{
+    text-align: center;
+    font-weight: 500;
+    font-size: 64px;
+    opacity: 0.6;    
+}
+
+.number div p{
+    font-style: normal;
+    font-weight: bold;
+    font-size: 80px;
+    margin-top: 0;
+    margin-bottom: 0;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+.number div span{
+    font-weight: 500;
+    margin: 0;
+    font-size: 20px;
+    line-height: 0;
+}
+.wait{
+    font-family: 'Rubik';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 32px;
+    line-height: 40px;
+    color: #FFFFFF;
+    mix-blend-mode: normal;
+    text-shadow: 0px 0px 50px rgba(0, 0, 0, 0.5);
+}
+.play-wrap{
+    /* background-color: green; */
+    display: flex;
+    position: absolute;
+    left: 0;
+    right: 0;
+    justify-content: center;
+    bottom: 50px;
+    z-index: 1;
+}
+.jumbotron .putar-video{
+    position: relative;
+    z-index: 4;
+    cursor: pointer;
+    width: 216px;
+    height: 56px;
+    font-weight: bold;
+    font-size: 16px;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 85px;
+    border: 0;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.jumbotron .putar-video img{
+    margin-left: 7px;
+}
+
+.footer{
+    padding-top: 40px;
+    padding-bottom: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.footer .list-footer{
+    background: #DA291C;
+    border-radius: 4px;
+    width: 80px;
+    height: 3px;
+    margin-bottom: 40px;
+}
+
+.footer .stayus{
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    color: #4C4C4C;
+    mix-blend-mode: normal;
+    opacity: 0.5;
+    margin-top: 0;
+    margin-bottom: 25px;
+}
+
+.footer .logos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+}
+.footer .logos img{
+    margin-right: 32px;
+}
+
+.footer .logos img:last-of-type{
+    margin-right: 0;
+}
+
+.footer .contactus{
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    text-align: center;
+    color: #0A0A0A; 
+    margin-bottom: 20px;   
+}
+
+.footer .list-down{
+    width: 60px;
+    height: 3px;
+    background: #DA291C;
+    border-radius: 4px;
+    margin-bottom: 40px;
+}
+
+.footer .copy{
+    text-align: center;
+    font-size: 14px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #0A0A0A;
+    mix-blend-mode: normal;
+    opacity: 0.5;
+}

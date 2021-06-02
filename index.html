@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/assets/style/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,800;1,300;1,400;1,800&family=Rubik:wght@300;400;700&display=swap" rel="stylesheet">
+    <title>Hello, world!</title>
+  </head>
+  <body>
+    <div class="modal-youtube" id="modal">
+        <div class="close" id='close'>X</div>
+        <iframe src="https://www.youtube.com/embed/X7Zx2ySia6w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    <nav>
+        <img src="/assets/images/logo.svg" alt="logo" >
+        <ul class="menus">
+            <li>ABOUT US <img src="/assets/images/chevron.svg" alt="chevron" ></li>
+            <li>explore cars <img src="/assets/images/chevron.svg" alt="chevron" ></li>
+            <li>promo</li>
+            <li>news & events</li>
+            <li>
+                <div class="burger">
+                    <div class="list"></div>
+                    <div class="list"></div>
+                    <div class="list"></div>
+                </div>
+            </li>
+        </ul>
+    </nav>
+    <div class="jumbotron" style="background-image: url('/assets/images/mobil.png');">
+        <div class="number">
+            <div class="hari">
+                <p id='dayDiv'>1</p>
+                <span>HARI</span>
+            </div>
+            <span>:</span>
+            <div class="jam">
+                <p id="hourDiv">5</p>
+                <span>JAM</span>
+            </div>
+            <span>:</span>
+            <div class="menit">
+                <p id="minuteDiv">30</p>
+                <span>MENIT</span>
+            </div>
+            <span>:</span>
+            <div class="detik">
+                <p id="seccondDiv">50</p>
+                <span>DETIK</span>
+            </div>
+        </div>
+        <p class="wait">
+            THE WAIT IS FINALLY OVER
+        </p>
+        <img src="/assets/images/textpajero.svg" alt="textpajero" >
+        <div class="play-wrap">
+            <button class="putar-video" id="handleVideo">
+                Tonton video <img src="/assets/images/play.svg" alt="play">
+            </button>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="list-footer"></div>
+        <p class="stayus">STAY CONNECTED WITH US</p>
+        <div class="logos">
+            <img src="/assets/images/socials/fb.svg" alt="socials">
+            <img src="/assets/images/socials/twitter.svg" alt="socials">
+            <img src="/assets/images/socials/ig.svg" alt="socials">
+            <img src="/assets/images/socials/yt.svg" alt="socials">
+            <img src="/assets/images/socials/mail.svg" alt="socials">
+        </div>
+        <p class="contactus">
+            Contact Us
+        </p>
+        <div class="list-down"></div>
+        <div class="copy">
+            Copyright © 2021.  <br>
+PT Mitsubishi Motors Krama Yudha Sales Indonesia
+        </div>
+    </div>
+    <script>
+        var modal = document.getElementById("modal");
+        var btnVideo = document.getElementById("handleVideo");
+        var btnClose = document.getElementById("close");
+        btnVideo.onclick = function() {
+            modal.style.display = "flex"; 
+        }
+        btnClose.onclick = function() {
+            modal.style.display = "none"; 
+        }
+
+        function plural(s, i) {
+        return i + ' ' + (i > 1 ? s + 's' : s);
+            }
+
+        function sundayDelta(offset) {
+        // offset is in hours, so convert to miliseconds
+            offset = offset ? offset * 60 * 60 * 1000 : 0;
+            var now = new Date(new Date().getTime() );
+            var days = 6 - now.getDay() + (now.getDay());
+            var hours = 24 - now.getHours();
+            var minutes = 60 - now.getMinutes();
+            var seconds = 60 - now.getSeconds();
+            return [days, hours, minutes,seconds];
+        }
+
+        var dayDiv = document.getElementById('dayDiv');
+        var hourDiv = document.getElementById('hourDiv');
+        var minuteDiv = document.getElementById('minuteDiv');
+        var seccondDiv = document.getElementById('seccondDiv');
+
+
+        setInterval(function() {
+            // $refresh.text('This page will refresh in ' + sundayDelta());
+            var times = sundayDelta()
+            dayDiv.innerHTML = times[0];
+            hourDiv.innerHTML = times[1];
+            minuteDiv.innerHTML = times[2];
+            seccondDiv.innerHTML = times[3];
+        }, 1000);
+
+    </script>
+  </body>
+</html>
